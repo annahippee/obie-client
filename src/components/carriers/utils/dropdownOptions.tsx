@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from 'uuid';
-import { StateCode, TypeOfInsurance } from '../../types';
+import { StateCode, TypeOfInsurance } from '../../../types';
 
 export const stateOptions = [
   {

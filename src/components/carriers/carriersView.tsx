@@ -2,10 +2,14 @@ import { useState } from 'react';
 import { Carrier, StateCode, TypeOfInsurance } from '../../types';
 import axios from 'axios';
 import { API_URL } from '../../constants';
-import { insuranceOptions, stateOptions } from './dropdownOptions';
 import CarrierCard from './carrierCard';
-import { mapUnknownToAxiosError } from '../../utils/errors';
-import { mapStringToInsuranceType, mapStringToStateCode } from './mapping';
+import { mapUnknownToAxiosError } from '../../utils';
+import {
+  mapStringToInsuranceType,
+  mapStringToStateCode,
+  insuranceOptions,
+  stateOptions,
+} from './utils';
 
 function CarriersView() {
   const [loading, setLoading] = useState(false);
@@ -14,7 +18,7 @@ function CarriersView() {
   const [state, setState] = useState<StateCode>();
   const [insuranceType, setInsuranceType] = useState<TypeOfInsurance>();
 
-  const fetchData = async () => {
+  const fetchCarriers = async () => {
     setLoading(true);
     try {
       if (!state && !insuranceType) {
@@ -42,7 +46,7 @@ function CarriersView() {
     if (!state && !insuranceType) {
       setCarriers([]);
     }
-    fetchData();
+    fetchCarriers();
   };
 
   const handleStateChange = (e: React.ChangeEvent<HTMLSelectElement>) => {

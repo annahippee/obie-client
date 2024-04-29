@@ -1,4 +1,4 @@
-import { StateCode, TypeOfInsurance } from '../../types';
+import { StateCode, TypeOfInsurance } from '../../../types';
 
 export const mapStringToStateCode = (str: string): StateCode | undefined => {
   switch (str) {
