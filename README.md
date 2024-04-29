@@ -11,7 +11,7 @@ https://www.loom.com/share/e5bacfa55c63473891c2ac49798953ac?sid=59f74496-b161-46
 
 ## APPROACH
 
-My goal was to create a simple, clean interface to fetch
+My goal was to create a simple, clean interface to find insurance carriers that provide the selected insurance type within the selected state.
 
 ## EXTRA CREDIT / STRETCH GOALS
 
